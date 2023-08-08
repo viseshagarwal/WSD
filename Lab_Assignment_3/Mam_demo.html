@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting Latitude and Longitude</title>
+    <link rel="stylesheet" href="styles/site.css" />
+  </head>
+  <body>
+    <h1>Getting Latitude and Longitude</h1>
+    <main>
+      <p>Time Stamp: <span id="timestamp"></span></p>
+      <p>Latitude : <span id="lat"></span></p>
+      <p>Longitude: <span id="long"></span></p>
+      <p>Lat/Long in Meters: <span id="accuracy"></span></p>
+      <p>Altitude: <span id="altitude"></span></p>
+      <p>Altitude in Meters: <span id="altitudeaccuracy"></span></p>
+      <p>Heading (Degrees from True North) <span id="heading"></span></p>
+      <p>Speed: (In meters/second): <span id="speed"></span></p>
+
+      <div id="errorArea" class="alert d-none"></div>
+      <a href="https://www.openstreetmap.org/#map=18/12.9320627/77.6128779"
+        >Map</a
+      >
+    </main>
+
+    <script>
+      "use strict";
+      window.onload = function () {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            displayPosition,
+            locationerror
+          );
+        } else {
+          displayError("Plaease Update your browser with Geolocation");
+        }
+      };
+      function displayPosition(pos) {
+        document.getElementById("timestamp").innerText = new Date(
+          pos.timestamp
+        );
+        document.getElementById("lat").innerText = pos.coords.latitude;
+        document.getElementById("long").innerText = pos.coords.longitude;
+        document.getElementById("accuracy").innerText = pos.coords.accuracy;
+        document.getElementById("altitude").innerText = pos.coords.altitude
+          ? pos.coords.altitude
+          : "n/a";
+        document.getElementById("altitudeaccuracy").innerText = pos.coords
+          .altitudeAccuracy
+          ? pos.coords.altitudeAccuracy
+          : "n/a";
+        document.getElementById("heading").innerText = pos.coords.heading;
+        document.getElementById("speed").innerText = pos.coords.speed;
+      }
+
+      function locationerror(error) {
+        let msg = "";
+        console.log("error.message = " + error.message);
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            msg = "User Doesn't want to share his/her Location";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            msg = " Can't determine user's position";
+            break;
+          case error.TIMEOUT:
+            msg = "The response is out of Time";
+            break;
+          case error.UNKNOWN_ERROR:
+            msg = "Unknown Error Occured";
+            break;
+        }
+        displayError(msg);
+      }
+      function displayError(msg) {
+        let elem = document.getElementById("errorArea");
+        elem.classList.remove("d-none");
+        elem.innerHTML = msg;
+      }
+    </script>
+  </body>
+</html>
