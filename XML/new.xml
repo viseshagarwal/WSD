@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CD_Catalog>
+    <CD>
+        <CD_Type>Sony CD ROM</CD_Type>
+        <CD_Size>780MB</CD_Size>
+        <CD_Content>College Data</CD_Content>
+        <CD_Price>100</CD_Price>
+    </CD>
+    <CD>
+        <CD_Type>Sony DVD</CD_Type>
+        <CD_Size>4 GB</CD_Size>
+        <CD_Content>Iron Man Movie</CD_Content>
+        <CD_Price>450</CD_Price>
+    </CD>
+    <CD>
+        <CD_Type>Blu-Ray DVD</CD_Type>
+        <CD_Size>4 GB</CD_Size>
+        <CD_Content>Avatar Movie</CD_Content>
+        <CD_Price>250</CD_Price>
+    </CD>
+    <CD>
+        <CD_Type>Sony Blu Ray DVD</CD_Type>
+        <CD_Size>2 GB</CD_Size>
+        <CD_Content>Avengers Movie</CD_Content>
+        <CD_Price>350</CD_Price>
+    </CD>
+
+    <CD>
+        <CD_Type>Sony CD ROM WR</CD_Type>
+        <CD_Size>780MB</CD_Size>
+        <CD_Content>Personal Data</CD_Content>
+        <CD_Price>150</CD_Price>
+    </CD>
+</CD_Catalog>
