@@ -1,6 +1,14 @@
+body {background-color: #f2f2f2;}
 .profile-pic{
     height:300px ;
     width: 300px;
     border-radius: 10%;
     display: block;
     }
+#carouselExampleControls{
+    height:auto;
+    width: 40%;
+    border-radius: 10%;
+    display: block;
+    margin: auto;
+}
