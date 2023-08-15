@@ -1,27 +1,28 @@
-<!-- 
-    Consider You are developing a city exploration web application that allows users to visualize their 
-    current location on a map and explore nearby points of interest. The application uses the Canvas and
-    Bing Maps API for map display and integrates geolocation to provide an interactive experience.
--->
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geolocation</title>
-    <meta charset="utf-8" />
+    <title>City Exploration</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script
       type="text/javascript"
-      src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"
+      src="https://www.bing.com/api/maps/mapcontrol?key=AnwScUqyWNCC1lj52RLnVD3NY9YXvCQAGzVP5_lZtgoCCT1MVXEGXz_F0Sxbvz9K"
     ></script>
-    <script type="text/javascript">
-      var map = null;
-      var geoloc = null;
-      var pin = null;
-      var infobox = null;
-
-      function GetMap() {
-        map = ne;
-      }
-    </script>
+    <script src="bingmap.js"></script>
   </head>
+  <body>
+    <h1>City Exploration</h1>
+    <div id="mapContainer" style="width: 100%; height: 500px"></div>
+    <br />
+    <br />
+    <div class="center">
+      <button id="locateButton">Locate Me</button>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://www.bing.com/api/maps/mapcontrol?callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
 </html>

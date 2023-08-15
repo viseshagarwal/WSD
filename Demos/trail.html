@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>City Exploration</title>
+    <style>
+      #mapCanvas {
+        width: 100%;
+        height: 500px;
+        border: 10px solid #e7e7e7;
+        border-radius: 2%;
+      }
+      h1 {
+        text-align: center;
+        font-family: "Lucida Console", Courier, monospace;
+        font-size: 50px;
+        color: #5c5a5a;
+      }
+    </style>
+    <script
+      src="https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario"
+      async
+      defer
+    ></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>City Exploration</h1>
+    <!--
+    <div id="mapCanvas"></div>
+-->
+
+    <button id="locateButton">Find My Location</button>
+    <div id="mapContainer" style="width: 100%; height: 500px"></div>
+  </body>
+</html>
