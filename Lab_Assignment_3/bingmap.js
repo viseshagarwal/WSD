@@ -1,6 +1,6 @@
 function initMap() {
   var map = new Microsoft.Maps.Map(
-    document.getElementById("mapContainer"),
+    document.getElementById("mapCanvas"),
     {
       credentials:
         "AnwScUqyWNCC1lj52RLnVD3NY9YXvCQAGzVP5_lZtgoCCT1MVXEGXz_F0Sxbvz9K",
