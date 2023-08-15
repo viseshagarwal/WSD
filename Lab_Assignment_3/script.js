@@ -2,8 +2,8 @@ let map;
 
 function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('mapCanvas'), {
-        credentials: 'AnwScUqyWNCC1lj52RLnVD3NY9YXvCQAGzVP5_lZtgoCCT1MVXEGXz_F0Sxbvz9K', // Replace with your Bing Maps API key
-        center: new Microsoft.Maps.Location(12.9716, 77.5946), // Default to New York City
+        credentials: 'AnwScUqyWNCC1lj52RLnVD3NY9YXvCQAGzVP5_lZtgoCCT1MVXEGXz_F0Sxbvz9K',
+        center: new Microsoft.Maps.Location(12.9716, 77.5946), // Default to Bangalore City
         zoom: 12
     });
 

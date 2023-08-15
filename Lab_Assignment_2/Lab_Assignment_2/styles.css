@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf6fa;
+    background-image: url('image.png');
+  }
+  
+  nav {
+    background-color: #5242e4;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav h1 {
+    font-size: 28px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #ffc107;
+  }
+  
+  .frames-container {
+    padding: 20px;
+  }
+  
+  .frame {
+    display: none;
+    padding: 80px 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  h2 {
+    color: #42a1f0;
+    font-size: 36px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #42a1f0;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: #42a1f0;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 12px 24px;
+    background-color: #87c4f7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #ffc107;
+  }
+  
+  /* Add a nice gradient background to the header section */
+  nav {
+    background: linear-gradient(45deg, #5242e4, #87c4f7);
+  }
+  
+  /* Add a subtle shadow to the main content section */
+  .frames-container {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Improve readability of project links */
+  ul li a {
+    font-weight: bold;
+  }
+  
+  /* Add a border and padding to the profile image */
+  aside img {
+    border-radius: 50%;
+    border: 5px solid #663f50;
+    padding: 5px;
+  }
+  .profile-pic{
+  height:300px ;
+  width: 300px;
+  border-radius: 10%;
+  display: block;
+  }
+  footer {
+    background: linear-gradient(45deg, #5242e4, #87c4f7);
+    background-color: #5242e4;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+.pic-hover{
+position: relative;
+  width: 50%;
+  max-width: 300px;
+}
