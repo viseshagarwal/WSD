@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Lab Ex.4: Write an XML file and validate the file using XSD Question: Employee Information 
+    XML Validation You are tasked with creating an XML validation program to manage employee information for a company. 
+The program will involve creating an XML document containing employee details, defining an 
+    XML schema to validate the structure and constraints of the data, and performing XML validation against the schema. 
+The goal is to ensure that the employee data adheres to the defined format and constraints.
+
+    Task 1: Create an XML Document
+Create an XML document named "employees.xml" that includes
+information for at least three employees. Each employee should have the
+following details:
+Personal Information:
+First Name
+Last Name
+Date of Birth (in the format YYYY-MM-DD)
+Gender (Male/Female)
+Employment Information:
+Position
+Salary
+Contact Information:
+Email
+Phone Number
+-->
+<employees>
+    <employee>
+        <first_name>Visesh Agarwal</first_name>
+        <last_name>Agarwal</last_name>
+        <date_of_birth>26-01-2001</date_of_birth>
+        <gender>Male</gender>
+        <employment_info>
+            <position>Software Engineer</position>
+            <salary>1000000</salary>
+            <contact_info>
+                <email>visesh.agarwal@mca.christuniversity.in</email>
+                <phone_no>9876543210</phone_no>
+            </contact_info>
+        </employment_info>
+    </employee>
+    <employee>
+        <first_name>sheel</first_name>
+        <last_name>Kanabar</last_name>
+        <date_of_birth>00-12-2001</date_of_birth>
+        <gender>Male</gender>
+        <employment_info>
+            <position>Support Engineer</position>
+            <salary>300000</salary>
+            <contact_info>
+                <email>sheel@gmail.com</email>
+                <phone_no>8765432109</phone_no>
+            </contact_info>
+        </employment_info>
+    </employee>
+    <employee>
+        <first_name>Akarshi</first_name>
+        <last_name>bansal</last_name>
+        <date_of_birth>08-06-2000</date_of_birth>
+        <gender>female</gender>
+        <employment_info>
+            <position>Software Engineer</position>
+            <salary>800000</salary>
+            <contact_info>
+                <email>akarshi@outlook.com</email>
+                <phone_no>7891234560</phone_no>
+            </contact_info>
+        </employment_info>
+    </employee>
+</employees>
