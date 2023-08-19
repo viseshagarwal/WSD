@@ -6,6 +6,7 @@
                 <xs:element name="employee" maxOccurs="unbounded" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
+                            <xs:element type="xs:integer" name="emp_id"/>
                             <xs:element type="xs:string" name="first_name"/>
                             <xs:element type="xs:string" name="last_name"/>
                             <xs:element type="xs:string" name="date_of_birth"/>
