@@ -1,12 +1,12 @@
 # code
 import xmlschema as xs
 
-xml_file = ".\Lab_Assignment_4\employees.xml"
-xsd_file = ".\Lab_Assignment_4\employees_schema.xsd"
+xml = ".\Lab_Assignment_4\employees.xml"
+xsd = ".\Lab_Assignment_4\employees_schema.xsd"
 
-validator = xs.XMLSchema(xsd_file)
-if validator.is_valid(xml_file):
-    print("XML file is valid against the XSD schema.")
+validator = xs.XMLSchema(xsd)
+if validator.is_valid(xml):
+    print("The XML file is valid against the XSD schema which is provided.")
 else:
-    print("XML file is not valid against the XSD schema.")
-    print(validator.validate(xml_file))
+    print("The XML file is not valid against the XSD schema which is provided.")
+    print(validator.validate(xml))

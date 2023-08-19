@@ -27,7 +27,7 @@ Phone Number
         <emp_id>10001</emp_id>
         <first_name>Visesh Agarwal</first_name>
         <last_name>Agarwal</last_name>
-        <date_of_birth>26-01-2001</date_of_birth>
+        <date_of_birth>2001-01-26</date_of_birth>
         <gender>Male</gender>
         <employment_info>
             <position>Software Engineer</position>
@@ -42,7 +42,7 @@ Phone Number
         <emp_id>10002</emp_id>
         <first_name>sheel</first_name>
         <last_name>Kanabar</last_name>
-        <date_of_birth>00-12-2001</date_of_birth>
+        <date_of_birth>2001-12-05</date_of_birth>
         <gender>Male</gender>
         <employment_info>
             <position>Support Engineer</position>
@@ -57,7 +57,7 @@ Phone Number
         <emp_id>10001</emp_id>
         <first_name>Akarshi</first_name>
         <last_name>bansal</last_name>
-        <date_of_birth>08-06-2000</date_of_birth>
+        <date_of_birth>2000-06-08</date_of_birth>
         <gender>female</gender>
         <employment_info>
             <position>Software Engineer</position>
