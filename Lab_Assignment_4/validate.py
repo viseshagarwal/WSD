@@ -1,8 +1,11 @@
 # code
 import xmlschema as xs
 
-xml = ".\Lab_Assignment_4\employees.xml"
-xsd = ".\Lab_Assignment_4\employees_schema.xsd"
+# xml = ".\Lab_assignment_4\employees.xml"
+# xsd = ".\Lab_assignment_4\employees_schema.xsd"
+
+xml = "C:\\Users\\vises\\OneDrive\\Desktop\\WSD\\Lab_assignment_4\\employees.xml"
+xsd = "C:\\Users\\vises\\OneDrive\\Desktop\\WSD\\Lab_assignment_4\\employees_schema.xsd"
 
 validator = xs.XMLSchema(xsd)
 if validator.is_valid(xml):
