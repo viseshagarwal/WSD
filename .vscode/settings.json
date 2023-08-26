@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/Lab_Assignment_2/index.html"
+  "livePreview.defaultPreviewPath": "/Lab_Assignment_2/index.html",
+  "editor.acceptSuggestionOnEnter": "on"
 }
