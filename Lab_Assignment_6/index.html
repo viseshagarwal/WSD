@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td>
+            <label>Name: </label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              id="name"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Email: </label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Password: </label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Confirm Password: </label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="Cpassword"
+              id="Cpassword"
+              placeholder="Confirm Password"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input
+              type="submit"
+              name="submit"
+              value="Submit"
+              onclick="onSubmit()"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
