@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function displayBooks() {
     // Make an AJAX request to fetch books.json (or your API URL)
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "./books.json", true);
+    xhr.open("GET", "books.json", true);
 
     xhr.onload = function () {
       if (xhr.status === 200) {
