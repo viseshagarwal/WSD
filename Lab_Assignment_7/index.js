@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error fetching data:", xhr.status, xhr.statusText);
       }
     };
-    /*
+
     xhr.onerror = function () {
       console.error("Network error occurred");
     };
-*/
+
     // Send the AJAX request
     xhr.send();
   }
