@@ -1,8 +1,7 @@
-/*
 function fetchAndDisplayBooks() {
   const bookList = document.getElementById("bookList");
   const xhr = new XMLHttpRequest();
-  const url = "https://elibraryrestapi.herokuapp.com/elibrary/api/book/list";
+  const url = "books.json";
   xhr.open("GET", url, true);
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -33,7 +32,8 @@ function displayBooks(books) {
 document
   .getElementById("fetchBooks")
   .addEventListener("click", fetchAndDisplayBooks);
-*/
+
+/*
 document.addEventListener("DOMContentLoaded", function () {
   const fetchBooksButton = document.getElementById("fetchBooks");
   const bookListDiv = document.getElementById("bookList");
@@ -89,3 +89,4 @@ document.addEventListener("DOMContentLoaded", function () {
     bookListDiv.appendChild(ul);
   }
 });
+*/

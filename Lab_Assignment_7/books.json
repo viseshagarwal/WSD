@@ -1,32 +1,22 @@
 [
   {
     "title": "The Catcher in the Rye",
-    "author": "J.D. Salinger",
-    "genre": "Fiction",
-    "year": 1951
+    "author": "J.D. Salinger"
   },
   {
     "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "genre": "Fiction",
-    "year": 1960
+    "author": "Harper Lee"
   },
   {
     "title": "1984",
-    "author": "George Orwell",
-    "genre": "Dystopian",
-    "year": 1949
+    "author": "George Orwell"
   },
   {
     "title": "Pride and Prejudice",
-    "author": "Jane Austen",
-    "genre": "Romance",
-    "year": 1813
+    "author": "Jane Austen"
   },
   {
     "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "genre": "Fiction",
-    "year": 1925
+    "author": "F. Scott Fitzgerald"
   }
 ]
