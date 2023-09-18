@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books JSON API Integration</title>
+  </head>
+  <body>
+    <button id="getBooksButton" onclick="getBooks()">Get Books</button>
+    <div id="booksContent"></div>
+
+    <script>
+      url =
+        "https://raw.githubusercontent.com/Punithify/punithify.github.io/main/Data/books.json";
+      function getBooks() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+            console.log(response);
+            displayBooks(response);
+          }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+      }
+
+      function displayBooks(books) {
+        var booksContent = document.getElementById("booksContent");
+        booksContent.innerHTML = ""; // Clear previous content
+
+        if (books && books.length > 0) {
+          for (var i = 0; i < books.length; i++) {
+            var book = books[i];
+            var bookInfo = `<strong>Title:</strong> ${book.title}<br>
+            <strong>Year:</strong> ${book.year}<br>
+            <strong>Country:</strong> ${book.country}<br>
+            <strong>Language:</strong> ${book.language}<br>
+            <strong>Pages:</strong> ${book.pages}<br>
+            <strong>Link:</strong> ${book.link}<br>
+            <strong>Author:</strong> ${book.author}<br><br>
+            <img src='${book.imageLink}'><br><br>`;
+            booksContent.innerHTML += bookInfo;
+          }
+        } else {
+          booksContent.innerHTML = "No books available.";
+        }
+      }
+    </script>
+  </body>
+</html>
