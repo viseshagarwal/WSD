@@ -10,6 +10,7 @@ try:
     xsl_file = "C:\\Users\\vises\\OneDrive\\Desktop\\WSD\\Lab_Assignment_5\\employee_transform.xsl"
 
     validator = xmlschema.XMLSchema(xsd_file)
+
     if validator.is_valid(xml_file):
         print("XML file is valid.")
     else:
@@ -28,8 +29,10 @@ try:
     output_filename = (
         "C:\\Users\\vises\\OneDrive\\Desktop\\WSD\\Lab_Assignment_5\\Output.html"
     )
+
     with open(output_filename, "wb") as html_file:
         html_file.write(etree.tostring(html_result, pretty_print=True))
+
     print(f"XML to HTML transformation complete. HTML saved to {output_filename}")
 
 
