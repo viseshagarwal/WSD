@@ -1,0 +1,27 @@
+<jokes_xml>
+    <jokes>
+        <category>Programming</category>
+        <joke>Why don't scientists trust atoms? Because they make up everything!</joke>
+    </jokes>
+    <jokes>
+        <category>Animal Crossing</category>
+        <joke>Parallel lines have so much in common. It's a shame they'll never meet.</joke>
+    </jokes>
+    <jokes>
+        <category>Religion</category>
+        <joke>I used to play piano by ear, but now I use my hands.</joke>
+    </jokes>
+    <jokes>
+        <category>Political</category>
+        <joke>Did you hear about the mathematician who's afraid of negative numbers? He'll stop
+            at nothing to avoid them.</joke>
+    </jokes>
+    <jokes>
+        <category>Food</category>
+        <joke>What do you call a fish with no eyes? Fsh.</joke>
+    </jokes>
+    <jokes>
+        <category>Geography</category>
+        <joke>I'm on a seafood diet. I see food, and I eat it.</joke>
+    </jokes>
+</jokes_xml>
