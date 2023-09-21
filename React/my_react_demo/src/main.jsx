@@ -1,13 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 //import App from './App.jsx'
-import Message from './message.jsx'
-// import './index.css'
+//import Message from "./Message.jsx";
+import "./Pokemon.jsx";
+import "./index.css";
+import "./App.css";
+import Pokemon from "./Pokemon.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Message />
+    {/* <Message messageData="Made by : " messageType="Visesh" /> */}
     {/* <App /> */}
-    
-  </React.StrictMode>,
-)
+    <Pokemon />
+  </React.StrictMode>
+);
