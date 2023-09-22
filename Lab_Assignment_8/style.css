@@ -1,0 +1,28 @@
+/*
+Make my website look beautiful
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Body */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
