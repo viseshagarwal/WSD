@@ -47,3 +47,16 @@ function callAPI() {
   console.log("hello", httpRequest.responseText);
 }
 window.onload = callAPI();
+
+document.getElementById("searchbox").onkeypress = function () {
+  search();
+};
+
+// Seach bar
+function search() {
+  let input = document.getElementById("search").value;
+  input = input.toLowerCase();
+  let x = document.getElementsByTagName("h3");
+  console.log(x);
+  console.log(input);
+}

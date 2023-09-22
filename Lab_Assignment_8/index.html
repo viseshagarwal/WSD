@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Json Books API</title>
+    <title>Shopping Website</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -28,19 +28,29 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light justify-content-between">
-      <a class="navbar-brand">Books API</a>
+      <a class="navbar-brand" href="./index.html">Shopping Website</a>
       <form class="form-inline">
         <input
           class="form-control mr-sm-2"
           type="search"
           placeholder="Search"
           aria-label="Search"
+          id="searchBox"
+          onkeypress="search()"
         />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button
+          class="btn btn-outline-success my-2 my-sm-0"
+          id="search"
+          type="submit"
+        >
           Search
         </button>
       </form>
     </nav>
+    <br />
+
+    <h1 style="text-align: center">Shopping Website</h1>
+    <br />
     <div class="row" id="display"></div>
     <script src="./script.js"></script>
   </body>
