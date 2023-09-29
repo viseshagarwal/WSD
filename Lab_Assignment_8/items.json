@@ -1,0 +1,93 @@
+[
+    {
+      "name": "Iphone X",
+      "description": "A powerful and sleek smartphone with a high-resolution display.",
+      "price": 799.99,
+      "image_url": "https://images.pexels.com/photos/1647976/pexels-photo-1647976.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Macbook Pro",
+      "description": "A high-performance laptop for professionals and gamers.",
+      "price": 1299.99,
+      "image_url": "https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Wireless Headphones",
+      "description": "Premium wireless headphones with noise-cancellation technology.",
+      "price": 199.99,
+      "image_url": "https://images.pexels.com/photos/610945/pexels-photo-610945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Smart TV 4K",
+      "description": "A 4K Ultra HD smart TV with built-in streaming apps.",
+      "price": 799.99,
+      "image_url": "https://images.pexels.com/photos/1444416/pexels-photo-1444416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Tablet",
+      "description": "Compact and lightweight tablet for on-the-go productivity.",
+      "price": 349.99,
+      "image_url": "https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Gaming Console",
+      "description": "Next-gen gaming console with cutting-edge graphics and performance.",
+      "price": 499.99,
+      "image_url": "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Smart Speaker",
+      "description": "Voice-controlled smart speaker with virtual assistant integration.",
+      "price": 149.99,
+      "image_url": "https://images.pexels.com/photos/4790267/pexels-photo-4790267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Camera DSLR",
+      "description": "Professional-grade DSLR camera with high-quality optics.",
+      "price": 899.99,
+      "image_url": "https://images.pexels.com/photos/1787234/pexels-photo-1787234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Wireless Router",
+      "description": "High-speed wireless router for seamless internet connectivity.",
+      "price": 79.99,
+      "image_url": "https://images.pexels.com/photos/4218546/pexels-photo-4218546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Smartwatch",
+      "description": "Feature-packed smartwatch with fitness tracking and GPS.",
+      "price": 249.99,
+      "image_url": "https://images.pexels.com/photos/2861929/pexels-photo-2861929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Bluetooth Earbuds",
+      "description": "True wireless Bluetooth earbuds with long battery life.",
+      "price": 129.99,
+      "image_url": "https://images.pexels.com/photos/8534088/pexels-photo-8534088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "External Hard Drive",
+      "description": "High-capacity external hard drive for data storage and backup.",
+      "price": 149.99,
+      "image_url": "https://images.pexels.com/photos/17924342/pexels-photo-17924342/free-photo-of-hard-external-disk.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Graphics Card",
+      "description": "Powerful graphics card for gaming and content creation.",
+      "price": 499.99,
+      "image_url": "https://images.pexels.com/photos/6341789/pexels-photo-6341789.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "name": "Smart Home Camera",
+      "description": "Home security camera with remote monitoring and AI features.",
+      "price": 149.99,
+      "image_url": "https://images.pexels.com/photos/7876185/pexels-photo-7876185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+      "name": "Wireless Keyboard and Mouse",
+      "description": "Combo set of wireless keyboard and mouse for convenience.",
+      "price": 49.99,
+      "image_url": "https://images.pexels.com/photos/6044930/pexels-photo-6044930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    }
+  ]
+  
