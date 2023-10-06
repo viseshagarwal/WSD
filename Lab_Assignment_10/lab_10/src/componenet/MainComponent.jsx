@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "./SearchComponenet";
 import PropertyList from "./PropertyList";
 import PropertyDetail from "./PropertyDetail";
 import propertyData from "./data"; // Import static property data
@@ -9,7 +9,6 @@ const MainComponent = () => {
   const [selectedProperty, setSelectedProperty] = useState(null);
 
   const handleSearch = (searchQuery) => {
-    // For simplicity, we'll filter properties based on the search query
     const filteredProperties = propertyData.filter((property) =>
       property.name.toLowerCase().includes(searchQuery.toLowerCase())
     );

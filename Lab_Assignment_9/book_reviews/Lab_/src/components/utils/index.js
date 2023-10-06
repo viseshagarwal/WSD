@@ -1,6 +1,5 @@
 export const url =
-  "https://raw.githubusercontent.com/viseshagarwal/WSD/main/Lab_Assignment_7/books.json";
-//  'https://raw.githubusercontent.com/Punithify/punithify.github.io/main/Data/books.json';
+  'https://raw.githubusercontent.com/Punithify/punithify.github.io/main/Data/books.json';
 
 export function allStorage() {
   var values = [],

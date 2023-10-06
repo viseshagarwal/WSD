@@ -1,8 +1,8 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <!-- Output method -->
+
     <xsl:output method="html" indent="yes" encoding="UTF-8" />
-    <!-- Template for root element -->
+
     <xsl:template match="/">
         <html>
             <head>
@@ -21,11 +21,11 @@
             </body>
         </html>
     </xsl:template>
-    <!-- Template for joke element -->
+
     <xsl:template match="joke">
         <tr>
             <td>
-                <xsl:value-of select="jokes/category" />
+                <xsl:value-of select="joke/category" />
             </td>
             <td>
                 <xsl:value-of select="." />
@@ -33,4 +33,4 @@
         </tr>
     </xsl:template>
 
-</xsl:stylesheet>
+</xsl:stylesheet> 
