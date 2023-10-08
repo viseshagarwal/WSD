@@ -28,6 +28,26 @@ app.post("/posts", (req, res) => {
     res.status(201).json({ message: "Post created successfully", postId });
   });
 });
+// ... existing code
+
+app.put("/posts/:id", (req, res) => {
+  const postId = req.params.id;
+  const updatedContent = req.body.content;
+  fs.writeFile(`${postsDir}${postId}.txt`, updatedContent, (err) => {
+    if (err) throw err;
+    res.json({ message: "Post updated successfully", postId });
+  });
+});
+
+app.delete("/posts/:id", (req, res) => {
+  const postId = req.params.id;
+  fs.unlink(`${postsDir}${postId}.txt`, (err) => {
+    if (err) throw err;
+    res.json({ message: "Post deleted successfully", postId });
+  });
+});
+
+// ... rest of the code
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");

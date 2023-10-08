@@ -32,18 +32,42 @@ const App = () => {
       })
       .catch((error) => console.error("Error creating post:", error));
   };
+  const handleEditPost = (postId) => {
+    const updatedContent = prompt("Enter updated content:", "");
+    if (updatedContent !== null) {
+      fetch(`http://localhost:3001/posts/${postId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ content: updatedContent }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Post updated successfully:", data);
+          fetchPosts();
+        })
+        .catch((error) => console.error("Error updating post:", error));
+    }
+  };
+
+  const handleDeletePost = (postId) => {
+    fetch(`http://localhost:3001/posts/${postId}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Post deleted successfully:", data);
+        fetchPosts();
+      })
+      .catch((error) => console.error("Error deleting post:", error));
+  };
 
   return (
     <div className="App">
-      {/* <textarea
-        value={newPostContent}
-        onChange={(e) => setNewPostContent(e.target.value)}
-        placeholder="Enter your blog post here"
-      /> 
-      <button onClick={handleCreatePost}>Create Post</button>*/}
-
       <div className="container">
         <h1 className="mt-5 mb-4">Blog Application</h1>
+        <br />
         <div className="form-group">
           <textarea
             className="form-control"
@@ -52,74 +76,33 @@ const App = () => {
             placeholder="Enter your blog post here"
           />
         </div>
+        <br />
       </div>
       <button className="btn btn-primary mb-3" onClick={handleCreatePost}>
         Create Post
       </button>
       <div className="posts-container">
         {posts.map((post) => (
-          <div key={post.id} className="post">
-            <strong>{post.id}</strong>
-            <br />
-            {post.content}
-            <hr />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-export default App;
-{
-  /* 
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+          <div key={post.id} className="post card p-3 my-3">
+            <strong>Post ID: {post.id}</strong>
+            <p className="mt-2">{post.content}</p>
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-const App = () => {
-  const [newPostContent, setNewPostContent] = useState("");
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => setPosts(response.data))
-      .catch((error) => console.error("Error fetching posts:", error));
-  }, []);
-
-  const handleCreatePost = () => {
-    axios
-      .post("https://jsonplaceholder.typicode.com/posts", {
-        content: newPostContent,
-      })
-      .then((response) => {
-        setPosts([...posts, response.data]);
-        setNewPostContent("");
-      })
-      .catch((error) => console.error("Error creating post:", error));
-  };
-
-  return (
-    <div className="container">
-      <h1 className="mt-5 mb-4">Blog Application</h1>
-      <div className="form-group">
-        <textarea
-          className="form-control"
-          value={newPostContent}
-          onChange={(e) => setNewPostContent(e.target.value)}
-          placeholder="Enter your blog post here"
-        />
-      </div>
-      <button className="btn btn-primary mb-3" onClick={handleCreatePost}>
-        Create Post
-      </button>
-      <div className="posts-container">
-        {posts.map((post) => (
-          <div key={post.id} className="card mb-3">
-            <div className="card-body">
-              <h5 className="card-title">{post.title}</h5>
-              <p className="card-text">{post.body}</p>
+            <div className="d-flex justify-content-center">
+              <button
+                onClick={() => handleEditPost(post.id)}
+                className="btn btn-warning mr-2 mr-2"
+                style={{ width: "80px" }}
+              >
+                Edit
+              </button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button
+                onClick={() => handleDeletePost(post.id)}
+                className="btn btn-danger"
+                style={{ width: "80px" }}
+              >
+                Delete
+              </button>
             </div>
           </div>
         ))}
@@ -127,6 +110,4 @@ const App = () => {
     </div>
   );
 };
-
-export default App; */
-}
+export default App;
