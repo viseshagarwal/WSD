@@ -1,46 +1,52 @@
+// src/components/TaskList.js
 import React, { useState } from "react";
 
-const TaskList = () => {
-  const [tasks, setTasks] = useState([]);
-  const [editingIndex, setEditingIndex] = useState(null);
-  const [editedTaskName, setEditedTaskName] = useState("");
+const TaskList = ({ tasks, onDelete, onEdit }) => {
+  const [editedTask, setEditedTask] = useState({
+    index: -1,
+    name: "",
+    dueDate: "",
+  });
 
-  const handleEditClick = (index) => {
-    setEditingIndex(index);
-    setEditedTaskName(tasks[index].name);
+  const handleEdit = (index, task) => {
+    setEditedTask({ index, ...task });
   };
 
-  const handleSaveEdit = () => {
-    if (editedTaskName.trim() !== "") {
-      const updatedTasks = tasks.map((task, index) =>
-        index === editingIndex ? { ...task, name: editedTaskName } : task
-      );
-      setTasks(updatedTasks);
-      setEditingIndex(null);
-    }
+  const handleSave = () => {
+    onEdit(editedTask.index, editedTask);
+    setEditedTask({ index: -1, name: "", dueDate: "" });
   };
 
   return (
-    <div>
+    <div className="task-list">
       <h2>Task List</h2>
       <ul>
         {tasks.map((task, index) => (
           <li key={index}>
-            {index === editingIndex ? (
+            {index === editedTask.index ? (
               <div>
                 <input
                   type="text"
-                  value={editedTaskName}
-                  onChange={(e) => setEditedTaskName(e.target.value)}
+                  placeholder="Task name"
+                  value={editedTask.name}
+                  onChange={(e) =>
+                    setEditedTask({ ...editedTask, name: e.target.value })
+                  }
                 />
-                <button onClick={handleSaveEdit}>Save</button>
+                <input
+                  type="date"
+                  value={editedTask.dueDate}
+                  onChange={(e) =>
+                    setEditedTask({ ...editedTask, dueDate: e.target.value })
+                  }
+                />
+                <button onClick={handleSave}>Save</button>
               </div>
             ) : (
               <div>
-                {task.name}
-                <button onClick={() => handleEditClick(index)}>Edit</button>
-                {/* <button onClick={() => handleDeleteTask(index)}>Delete</button> */}
-                <button onClick={() => handleSaveEdit(index)}>Delete</button>
+                {task.name} (Due: {task.dueDate}) -
+                <button onClick={() => handleEdit(index, task)}>Edit</button>
+                <button onClick={() => onDelete(index)}>Delete</button>
               </div>
             )}
           </li>

@@ -1,55 +1,40 @@
-// import React, { useState } from "react";
-
-// const TaskForm = ({ addTask }) => {
-//   const [taskName, setTaskName] = useState("");
-
-//   const handleTaskNameChange = (e) => {
-//     setTaskName(e.target.value);
-//   };
-
-//   const handleAddTask = () => {
-//     if (taskName.trim() !== "") {
-//       addTask({ name: taskName });
-//       setTaskName("");
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Add New Task</h2>
-//       <input
-//         type="text"
-//         value={taskName}
-//         onChange={handleTaskNameChange}
-//         placeholder="Enter task name"
-//       />
-//       <button onClick={handleAddTask}>Add Task</button>
-//     </div>
-//   );
-// };
-
-// export default TaskForm;
-
+// src/components/TaskForm.js
 import React, { useState } from "react";
 
-const TaskForm = ({ addTask }) => {
-  const [taskName, setTaskName] = useState("");
+const TaskForm = ({ onSubmit }) => {
+  const [task, setTask] = useState({ name: "", dueDate: "" });
 
-  const handleTaskNameChange = (e) => {
-    setTaskName(e.target.value);
-  };
-
-  const handleAddTask = () => {
-    if (taskName.trim() !== "") {
-      addTask({ name: taskName });
-      setTaskName("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (task.name.trim() === "") {
+      alert("Task name cannot be empty");
+      return;
     }
+    onSubmit(task);
+    setTask({ name: "", dueDate: "" });
   };
 
   return (
-    <div>
-      <input type="text" value={taskName} onChange={handleTaskNameChange} />
-      <button onClick={handleAddTask}>Add Task</button>
+    <div className="task-form">
+      <h2>Add Task</h2>
+      <form>
+        <input
+          id="task-name"
+          type="text"
+          placeholder="Task name"
+          value={task.name}
+          onChange={(e) => setTask({ ...task, name: e.target.value })}
+        />
+        <input
+          type="date"
+          placeholder="Due date"
+          value={task.dueDate}
+          onChange={(e) => setTask({ ...task, dueDate: e.target.value })}
+        />
+        <button type="submit" onSubmit={handleSubmit}>
+          Add
+        </button>
+      </form>
     </div>
   );
 };
