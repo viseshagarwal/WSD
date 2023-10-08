@@ -9,8 +9,14 @@ const MainComponent = () => {
   const [selectedProperty, setSelectedProperty] = useState(null);
 
   const handleSearch = (searchQuery) => {
-    const filteredProperties = propertyData.filter((property) =>
-      property.name.toLowerCase().includes(searchQuery.toLowerCase())
+    const filteredProperties = propertyData.filter(
+      (property) =>
+        property.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        property.description
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        property.location.toLowerCase().includes(searchQuery.toLowerCase())
+      //property.price.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setProperties(filteredProperties);
   };
@@ -26,6 +32,7 @@ const MainComponent = () => {
         properties={properties}
         onPropertySelect={handlePropertySelect}
       />
+
       {selectedProperty && <PropertyDetail property={selectedProperty} />}
     </div>
   );
