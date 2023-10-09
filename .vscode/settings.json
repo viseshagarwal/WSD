@@ -1,4 +1,5 @@
 {
   "livePreview.defaultPreviewPath": "/Lab_Assignment_2/index.html",
-  "editor.acceptSuggestionOnEnter": "on"
+  "editor.acceptSuggestionOnEnter": "on",
+  "git.ignoreLimitWarning": true
 }

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,47 @@
   to {
     transform: rotate(360deg);
   }
+} */
+/* src/App.css */
+
+.app {
+  height: 650px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: rgb(232, 250, 215);
+  padding: 20px;
+}
+
+.task-form {
+  margin-left: 30%;
+  flex: dsiplay;
+  flex-direction: column;
+  background-color: #e4d9b3f7;
+  border: 1px solid #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  width: 40%;
+}
+
+.task-list {
+  margin-left: 30%;
+  flex: dsiplay;
+  flex-direction: column;
+  background-color: #e1f14ef7;
+  border: 1px solid #000000;
+  padding: 20px;
+  border-radius: 4px;
+  width: 40%;
+}
+
+button {
+  margin-left: 10px;
+}
+
+#task-name {
+  margin: 10px;
+}
+input {
+  margin: 10px;
 }

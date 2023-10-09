@@ -1,8 +1,6 @@
-// src/App.js
-import React, { useState } from 'react';
-import './App.css'; // Import your CSS for styling
-import TaskList from './components/TaskList';
-import TaskForm from './components/TaskForm';
+import React, { useState } from "react";
+import TaskList from "./componenets/TaskList";
+import TaskForm from "./componenets/TaskForm";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -23,10 +21,10 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1>Task Manager</h1>
-      <TaskForm onSubmit={addTask} />
-      <TaskList tasks={tasks} onEdit={editTask} onDelete={deleteTask} />
+    <div className="App">
+      <h1>My Task List App</h1>
+      <TaskForm addTask={addTask} />
+      <TaskList tasks={tasks} editTask={editTask} deleteTask={deleteTask} />
     </div>
   );
 }

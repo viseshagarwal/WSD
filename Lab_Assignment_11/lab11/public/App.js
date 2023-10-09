@@ -7,13 +7,13 @@ import TaskForm from './components/TaskForm';
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  const addTask = (task) => {
-    setTasks([...tasks, task]);
+  const addTask = (taskName) => {
+    setTasks([...tasks, { name: taskName }]);
   };
 
-  const editTask = (index, updatedTask) => {
+  const editTask = (index, updatedTaskName) => {
     const updatedTasks = [...tasks];
-    updatedTasks[index] = updatedTask;
+    updatedTasks[index].name = updatedTaskName;
     setTasks(updatedTasks);
   };
 
