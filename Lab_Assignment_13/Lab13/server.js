@@ -48,4 +48,4 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-//LINK: http://localhost:3006/search-rooms?checkInDate=2023-10-15&checkOutDate=2023-10-20&roomType=Standard&occupancy=2
+//LINK: http://localhost:3001/search-rooms?checkInDate=2023-10-15&checkOutDate=2023-10-20&roomType=Standard&occupancy=2
